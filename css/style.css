@@ -1,44 +1,115 @@
+/* --- Общие стили --- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header и навигация --- */
 header {
-    background-color: #4CAF50;
+    background-color: #0077b6;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
-    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
 }
 
+nav ul li a:hover {
+    background-color: #00b4d8;
+    border-radius: 5px;
+}
+
+/* --- Main content --- */
 main {
-    padding: 20px;
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0077b6;
+}
+
+h3 {
+    color: #023e8a;
+}
+
+/* --- Списки --- */
+ul {
+    padding-left: 20px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* --- Блоки кода --- */
+pre {
+    background-color: #1e1e2f;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
     margin-bottom: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
 }
